@@ -3,6 +3,7 @@
 #include<stdio.h>
 #include <sys/types.h>
 #include<unistd.h>
+#include<stdlib.h>
 
 int main()
 {
@@ -14,10 +15,14 @@ int main()
 	int pid = fork();
 
 	if(pid == 0){
-		sleep(3);
+		sleep(5);
 		printf("Child Process is Running\n");
+		exit(0);
 	}else{
+		
 		printf("Parent Process is Running\n");
 	}
+
+	return 0;
 	
 }
